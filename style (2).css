@@ -1,0 +1,678 @@
+body {
+    font-size: 15pt;
+    font-family:'Poppins',sans-serif;
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+.header{
+  min-height:100vh;
+  width:100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(5,9,150,0.7)),url('images/cambridge.jpeg');
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  color:#fff;
+}
+
+nav{
+  display:flex;
+  padding:20px;
+  justify-content: space-between;
+  align-items:center;
+}
+
+nav img {
+  width:180px;
+}
+
+nav .fa{
+  display:none;
+}
+
+.nav-links{
+  flex:1;
+  text-align: right;
+  margin-bottom:25px;
+  margin-top:25px;
+}
+
+.nav-links ul li {
+  list-style-type:none;
+  display:inline-block;
+  padding:10px;
+  position:relative;
+}
+
+.nav-links ul li a {
+  text-decoration:none;
+  color:#fff;
+}
+
+.nav-links ul li::after{
+  content:'';
+  width:0%;
+  height:2px;
+  background:#f44326;
+  display:block;
+  margin:2px;
+}
+
+.nav-links ul li:hover::after{
+  width:100%;
+  transition:1s;
+}
+
+.text-box{
+  width:90%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  text-align: center;
+  transform: translate(-50%,-50%)
+}
+
+.text-box h1{
+  padding-top: 50px;;
+  font-size:70px;
+}
+
+.text-box p{
+  font-size:35px;
+  margin:20px 0 40px;
+  
+}
+
+.hero-btn{
+  display:inline-block;
+  cursor: pointer;
+  border:1px solid white;
+  padding:15px;
+  margin-bottom:25px;
+  position:relative;
+  color:#fff;
+  font-size:20px;
+  background: transparent;
+  text-decoration: none;
+  border-radius:5px;
+  width:60%;
+}
+
+.hero-btn:hover{
+  color:tomato;
+  background: tomato;
+  transition:1s;
+  font-weight:bold;
+}
+
+@media(max-width:600px){
+
+  .header{
+    min-height:50vh;
+  }
+
+nav img{
+  width:120px;
+}
+
+nav .fa{
+  display:block;
+  font-size:25px;
+  color:#fff;
+  margin:12px;
+  cursor:pointer;
+  top:8px;
+  right:10px;
+}
+
+.nav-links{
+  margin-top:0;
+}
+
+.nav-links ul{
+  padding:20px;
+}
+
+.nav-links ul li{
+  display:block;
+}
+
+.nav-links{
+  position: fixed;
+  height:50vh;
+  width:200px;
+  top:0;
+  right:-200px;
+  text-align:left;
+  background:#4C1399AD;
+  z-index:2;
+  overflow-x:hidden;
+  transition:2s;
+}
+
+.text-box{
+  margin-top:30px;
+}
+
+.text-box h1{
+  font-size:25px;
+}
+
+.text-box p{
+  font-size:15px;
+  margin:10px 0 20px;
+}
+
+.hero-btn{
+  width:40%;
+  padding:10px;
+}
+}
+
+       /*-----COURSE----*/
+       
+ .course{
+  padding-top:50px;
+  margin:auto;
+  text-align: center;
+  width:90%;
+ }
+ 
+ .course h1{
+  font-size:70px;
+  font-weight:600;
+ }
+ 
+ .course p{
+  font-size:35px;
+  padding:15px;
+  font-weight:400;
+  line-height:1.5;
+ }
+ 
+.row{
+  margin-top:5%;
+  display:flex;
+  justify-content:space-between;
+}
+
+.course-column{
+  flex-basis:31%;
+  background:#fff3f3;
+  padding:20px;
+  margin-right:5px;
+ margin-bottom:5%;
+ border-radius:10px;
+}
+
+.course-column h3 {
+  font-weight:600;
+  margin:10px;
+  text-align: center;
+}
+.course-column:hover{
+  box-shadow:0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+
+@media(max-width:600px){
+  
+  .row{
+    flex-direction:column;
+  }
+  
+  .course{
+    width:90%;
+  }
+  
+ .course h1{
+  font-size:40px;
+  font-weight:600;
+}
+}
+
+       /*------CAMPUS------*/
+
+.campus{
+  margin:auto;
+  text-align: center;
+  width:90%;
+  padding-top:40px;
+}
+
+.campus h2{
+  font-size:70px;
+  font-weight:600;
+}
+
+.campus p{
+  font-size:35px;
+  font-weight:400;
+  margin-top:10px;
+  padding:8px;
+}
+
+.campus-col{
+  flex-basis:33%;
+  margin-bottom:25px;
+  border-radius:10px;
+  position:relative;
+  overflow: hidden;
+}
+
+.campus-col img{
+  height:100%;
+  width:100%;
+  display:block;
+}
+
+.layer{
+  background: transparent;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  transition:0.5s;
+}
+
+.layer:hover{
+  background:rgba(226,0,0,0.7);
+}
+
+.layer h3{
+  font-size:30px;
+  font-weight:500;
+  bottom:0;
+  left:50%;
+  position: absolute;
+  transform: translate(-50%);
+  opacity:0;
+  transition:0.5s;
+  color:#fff;
+}
+
+.layer:hover h3{
+  opacity:1;
+  bottom:49%;
+}
+
+ @media(max-width:600px){
+   
+   .campus{
+    padding-top:35px;
+     width:90%;
+   }
+   
+   .campus h2{
+  font-size:40px;
+  font-weight:600;
+}
+
+.campus p{
+  font-size:30px;
+  font-weight:400;
+  margin-top:5px;
+  padding:4px;
+}
+ }
+ 
+ /*------FACILITIES-------*/
+ 
+ .facilities{
+  width:90%;
+  margin:5%;
+  padding-top:50px;
+  text-align: center;
+ }
+ 
+ .facilities h2{
+   
+  font-size:70px;
+  font-weight:600;
+  text-align: center;
+ }
+ 
+ .facilities p{
+  font-size:35px;
+  font-weight:400;
+  margin-bottom:8px;
+  text-align: center;
+  padding:10px;
+ }
+ 
+ .facilities-col{
+  flex-basis:31%;
+  margin-bottom:5%;
+  border-radius:10px;
+ }
+ 
+ .facilities-col img{
+   width:100%;
+   border-radius:10px;
+ }
+ 
+ .facilities-col h3 {
+  margin-bottom:15px;
+  margin-top:15px;
+  margin-left:8px;
+  text-align:left;
+  font-size:45px;
+  font-weight:700;
+ }
+ 
+.facilities-col p{
+  padding-bottom:4px;
+  font-size:25px;
+  font-weight:400;
+  text-align: left;
+  
+}
+
+@media(max-width:600px) {
+  
+  .facilities{
+    width:90%;
+    padding-top:30px;
+    margin:auto;
+  }
+ 
+ .facilities h2{
+   
+  font-size:40px;
+  font-weight:600;
+  text-align: center;
+ }
+ 
+ .facilities p{
+  font-size:30px;
+  font-weight:500;
+  margin-bottom:5px;
+  text-align: center;
+  padding:6px;
+ }
+ 
+ .facilities-col h3 {
+  margin-bottom:8px;
+  margin-top:10px;
+  margin-left:4px;
+  text-align:left;
+  font-size:30px;
+  font-weight:600;
+ }
+ 
+.facilities-col p{
+  margin-top:0;
+  padding-bottom:4px;
+  font-weight:400;
+}
+
+}
+
+/*--------TESTIMONIALS----------*/
+
+.testimonial{
+  
+  width:90%;
+  margin:auto;
+  text-align: center;
+  padding-top:25px;
+}
+
+.testimonial h1 {
+  font-size:70px;
+  font-weight:700;
+  text-align: center;
+}
+
+.testimonial p{
+  font-size:35px;
+  font-weight:500;
+  margin-bottom:8px;
+  text-align: center;
+  padding:10px;
+ }
+ 
+.testimonial-col{
+  flex-basis:48%;
+  margin-bottom:5%;
+  border-radius:10px;
+  text-align:left;
+  background:#fff3f3;
+  cursor:pointer;
+  padding:20px;
+  display:flex;
+}
+
+.testimonial-col h3{
+  font-size:30px;
+  font-weight:600;
+  text-align:left;
+}
+
+.testimonial-col img{
+  height:70px;
+  border-radius:50%;
+  margin-right:30px;
+  margin-left:10px;
+}
+
+.testimonial-col .fa{
+  color:#f44336;
+  font-size:30px;
+  text-align: left;
+}
+
+
+@media(max-width:600px){
+  
+  .testimonial{
+    width:90%;
+  }
+  
+  .testimonial h1 {
+  font-size:45px;
+  font-weight:700;
+  text-align: center;
+}
+
+.testimonial p{
+  font-size:35px;
+  font-weight:500;
+  margin-bottom:8px;
+  text-align: center;
+  padding:10px;
+ }
+ 
+  .testimonial-col{
+    display:flex;
+    flex-direction:column;
+    margin-top:30px;
+  }
+.testimonial-col h3{
+  font-size:35px;
+  font-weight:600;
+  text-align: center;
+}
+  
+.testimonial-col img{
+  height:180px;
+  margin-right:10px;
+  margin-left:0px;
+}
+
+.testimonial-col .fa{
+  color:#f44336;
+  font-size:30px;
+vertical-align:center;
+}
+
+}
+
+/*----CONTACT SECTION---*/
+
+.cta{
+  width:90%;
+  margin:5%;
+  margin-top:50px;
+  text-align: center;
+  margin-bottom:60px!important;
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/cambridge.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-radius:10px;
+  padding:15px;
+  margin-bottom:25px;
+}
+
+.cta h1{
+  color:#fff;
+  margin-top:30px;
+  margin-bottom:40px;
+  padding:0;
+}
+
+@media(max-width:600px){
+  
+  .cta h1{
+    font-size:25px;
+  }
+}
+
+/*------FOOTER SECTION------*/
+
+.footer{
+  width:100%;
+  margin: auto;
+  padding-top:40px;
+  text-align:center;
+  padding-bottom:20px;
+  background:#fff3f3;
+}
+
+.footer h4{
+  font-weight:600;
+  margin-top:25px;
+  margin-bottom:20px;
+}
+
+.icons .fa{
+  font-size:30px;
+  margin-top:15px;
+  padding:15px;
+  cursor:pointer;
+  color:#f44336;
+}
+
+.fa-heart{
+  color:#f44336;
+}
+.copy{
+  margin:10px;
+}
+
+
+
+/*--------ABOUT US PAGE---------*/
+
+.sub-header{
+  min-height:100vh;
+  width:100%;
+  background:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/about.jpeg);
+  background-size:cover;
+  background-position: center;
+  text-align: center;
+  color:white;
+}
+
+.sub-header h1{
+  font-weight:700;
+  font-size:70px;
+  margin-top:600px;
+  /*margin-bottom:120px;*/
+}
+
+.about-us{
+  
+  width:90%;
+  margin-top:auto;
+  text-align: center;
+  padding-top:50px;
+  padding-bottom:40px;
+}
+
+.about-col{
+  flex-basis:48%;
+  padding:30px;
+}
+
+.about-col h1{
+  font-size:50px;
+  font-weight:700px;
+}
+
+.about-col p{
+  font-size:30px;
+  font-weight:500;
+  padding:10px;
+}
+
+.about-col img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  border-radius:5px;
+}
+
+.red-btn{
+  background: transparent;
+  border:1px solid #f44336;
+  color:#f44336;
+  margin-top:15px;
+}
+
+.red-btn:hover{
+  color:#fff;
+}
+
+@media(max-width:600px){
+  
+  .sub-header{
+    min-height:50vh;
+    width:100%;
+  }
+  
+  .sub-header h1{
+  font-weight:600;
+  font-size:40px;
+  margin-top:100px;
+}
+
+.about-us{
+  
+  width:100%;
+  margin-top:auto;
+  text-align: center;
+  padding-top:35px;
+  padding-bottom:25px;
+}
+
+.about-col{
+  flex-basis:48%;
+  padding:30px;
+}
+
+.about-col h1{
+  font-size:35px;
+  font-weight:500px;
+}
+
+.about-col p{
+  font-size:20px;
+  font-weight:400;
+  padding:10px;
+}
+
+}
